@@ -1,0 +1,28 @@
+#if arm host = arm
+host =
+#if arm prefix = arm-linux-
+prefix =
+#if arm ARMFLAG = -DARM_DAEMON
+ARMFLAG =
+
+DYNALIB = -Llib/$(host) -lxml2 -lpthread -lsqlite3
+INCLUDE = -Iinclude -Iinclude/libxml
+DAEMON_SRC = src/
+
+CC = $(prefix)gcc
+
+OBJS = link.o main.o parse_xml.o serinit.o write_database.o signal_handler.o
+
+all: $(OBJS) install
+
+%.o : src/%.c
+	$(CC) -c  $< $(INCLUDE) -o $@
+
+install:
+	$(CC) *.o -o $(host)server $(INCLUDE) $(DYNALIB);
+	$(CC) $(DAEMON_SRC)daemonize.c $(INCLUDE) -o mydaemon $(ARMFLAG);
+	$(CLEAN_DOTO)
+
+
+clean:
+	rm -f  *~ *.o *~

@@ -1,0 +1,27 @@
+一.使用yaffs文件系统;(将yaffs烧录到板子上)
+通过串口将PC上的文件传给开发板
+1.启动开发板到Linux 控制台状态
+  (minicom)
+
+2.bash# cd /tmp
+
+3. bash# rx 文件名(例如：cs8900.ko)
+
+4. Crtl + A Z
+
+   按S后
+   选择 xmodem 协议
+
+5.选择文件
+    用空格键 选中文件名例如：cs8900.ko
+
+PC端需要安装以下软件：
+
+rx 与minicom 传输,需要安装lrzsz
+apt-get install lrzsz
+
+二.在kernel里屏蔽网卡驱动;
+三.编译新的kernel;烧写到2410板子上;此后Linux网络不能再用。
+四.将写好的驱动程序和测试程序下载到主板上;
+
+

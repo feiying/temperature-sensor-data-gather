@@ -1,0 +1,9 @@
+makefile文件依次编译各个模块文件后都放在app文件夹中
+
+prefix  host 如果不指定则编译为pc平台上的目标文件
+如果按如下方式指定：
+prefix＝arm-linux-
+host=arm
+则生成arm目标平台的可执行文件
+
+生成arm目标平台的可执行文件时，需要将相应的./lib库考贝到目标的相应的路径中。

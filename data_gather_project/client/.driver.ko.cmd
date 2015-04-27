@@ -1,0 +1,1 @@
+cmd_/home/akaedu/Desktop/last_project/client/driver.ko := arm-linux-ld -EL  -r -o /home/akaedu/Desktop/last_project/client/driver.ko /home/akaedu/Desktop/last_project/client/driver.o /home/akaedu/Desktop/last_project/client/driver.mod.o

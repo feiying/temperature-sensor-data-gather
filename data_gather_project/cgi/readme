@@ -1,0 +1,6 @@
+make arm_cgi 生成目标平台为arm的程序
+在情况下，需要把sqliete动态库拷贝到目标平台的/usr/lib中
+
+make pc_cgi 生成目标平台为pc的程序
+
+

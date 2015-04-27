@@ -1,0 +1,17 @@
+if you want to get a executeable file to run in host
+  you can operate as follow:
+  make;
+  make install;
+
+you can get a file named "server" in local directory that can run in host as a server,
+and you also get a server deamon program in local directory named "mydeamon";
+
+if you want to get a executeable file to run in a ARM machine
+  you can operate as follow;
+  make host=arm-linux-;
+  make install_arm host=arm-linux-;
+
+you can get a file named "server_arm" in local directory that can run in host as a server,
+and you also get a server deamon program in local directory named "mydeamon_arm";
+
+
